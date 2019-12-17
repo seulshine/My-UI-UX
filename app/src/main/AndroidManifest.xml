@@ -41,7 +41,7 @@
         <activity
             android:name="com.yeseul.belonging.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".MapActivity" /> <!-- because I want my activity to be always in portrait mode even after use changes the device's orientation. -->
+
         <activity
             android:name="com.yeseul.belonging.MainActivity"
             android:screenOrientation="portrait"
