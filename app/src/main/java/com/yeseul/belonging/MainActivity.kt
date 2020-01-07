@@ -21,5 +21,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        album.setOnClickListener{
+            val intent = Intent(this@MainActivity, AlbumActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -2,20 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yeseul.belonging">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
-    <!-- Apps that need to access Internet must request Internet permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Apps that need to access Internet must request Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-
 
     <application
         android:allowBackup="true"
@@ -25,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".AlbumActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -39,11 +34,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.yeseul.belonging.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
         <activity
-            android:name="com.yeseul.belonging.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme">
             <intent-filter> <!-- 메인이 되는 곳 -->
@@ -53,13 +47,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.yeseul.belonging.WeatherActivity"
+            android:name=".WeatherActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>
